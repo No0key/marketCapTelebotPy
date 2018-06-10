@@ -14,7 +14,7 @@ r = requests.get('https://api.coinmarketcap.com/v2/listings')
 @bot.message_handler(content_types=['text'])
 def user_req(message: Message):
     newReq = str(message.text)                                   #catch user request
-    all_coins = json.loads(r.text)                               #get all coins for comparing
+    all_coins = json.loads(r.text)                               #get a list of all the coins to check if there is a coin
     for i in all_coins['data']:
          if newReq.upper() == i['symbol']:
              res = marketCall(i['id'])
