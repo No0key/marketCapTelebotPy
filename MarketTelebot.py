@@ -29,8 +29,8 @@ def marketCall(req):                                            #function for ge
     coin = one_coin['data']['name']
     price = one_coin['data']['quotes']['USD']['price']
     change = one_coin['data']['quotes']['USD']['percent_change_24h']
-    result = ("Price of " + str(coin) + " = " + str(price) + " and 24 hour % change = " + str(change))
-    return (result)
+    res = ("Price of " + str(coin) + " = " + str(price) + " and 24 hour % change = " + str(change))
+    return (res)
 
 
 
